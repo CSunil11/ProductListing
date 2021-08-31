@@ -1,6 +1,5 @@
 // filename : productListing.js
 
-const mongoose = require('mongoose');
 const { Products, Category } = require('./model');
 
 app.get ('/products', function(req, res)) {

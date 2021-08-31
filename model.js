@@ -1,8 +1,8 @@
 // File name : model.js
 
-const mongoose = require('mongoose');
+const db = require('./mongodb');
 
-const productSchema = new mongoose.Schema({
+const productSchema = new db.Schema({
 	product_name: String,
 	category_name: String,
 	price: Number,
@@ -14,13 +14,13 @@ const productSchema = new mongoose.Schema({
 	deliveryCharge: Number
 })
 
-const categorySchema = new mongoose.Schema({
+const categorySchema = new db.Schema({
 	category_name: String,
 	category_id: Number
 })
 
-const Category = mongoose.model('Category', categorySchema);
-const Products = mongoose.model('Products', productSchema);
+const Category = db.model('Category', categorySchema);
+const Products = db.model('Products', productSchema);
 
 module.exports = {
 	Products, Category

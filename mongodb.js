@@ -1,10 +1,10 @@
 const MongoClient = require('mongodb').MongoClient;
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://localhost:3000';
 
 // Database Name
-const dbName = 'myproject';
+const dbName = 'myproject'; 
 
 // Create a new MongoClient
 const client = new MongoClient(url);
